@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="difference between value and innerHTMK">
+        <title>Using value or innerHTML</title>
+        <style>
+            table, td, th {border: 1px solid red;}
+            label { font-weight: bold; }
+            form { background-color: skyblue; color: darkblue; margin-bottom: 20px;}
+            input[id='fullname']:focus, input[id='age']:focus { background-color: yellow; }
+        </style>
+        <script>
+            function simple() {
+                var fullname = document.getElementById('fullname').value;
+                var age = parseInt(document.getElementById('age').value);
+                
+                document.getElementById('result').innerHTML = "<strong>" + fullname + "</strong>, you are " + age + " years old";
+                document.getElementById('inputresult').value = fullname + ", you are " + age + " years old";
+                document.getElementById('tableresult').innerHTML = "<strong>" + fullname + "</strong>, you are " + age + " years old";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>When should I use .value or .innerHTML?</h1>
+        </header>
+        <main>
+            <article>
+                <h2>Simple form below</h2>
+                <form action="#" method="get">
+                    <label for="fullname">Full Name</label><br>
+                    <input type="text" name="fullname" id="fullname" placeholder="Your full name"><br><br>
+                    <label for="age">Age</label><br>
+                    <input type="number" min="18" name="age" id="age" placeholder="Age"><br><br>
+                    <textarea id="result" name="result" readonly></textarea><br>
+                    <input type="text" name="inputresult" id="inputresult" value="nothing here" readonly size="60"><br>
+                    <input type="button" value="Submit" onclick="simple();">&nbsp;&nbsp;<input type="reset" value="Clear Form">
+                </form>
+                <table>
+                    <tr>
+                        <th>Result in a Table</th>
+                    </tr>
+                    <tr>
+                        <td id="tableresult"></td>
+                    </tr>
+                </table>
+            </article>
+        </main>
+        <footer>
+            <p>Web page made by Claudia Da Silva &copy;</p>
+        </footer>
+    </body>
+</html>
