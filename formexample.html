@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>HTML5 and Forms</title>
+<meta charset="utf-8">
+<meta name="description" content="example of HTML5 document using forms">
+
+<style>
+
+body {background-color: #f5f5dc;}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HTML5 and Forms</h1>
+
+<p>1. The <strong>autofocus</strong> attribute specifies that a field should automatically get focus when a page is loaded.
+Note: The autofocus attribute works with all input types.
+</p>
+
+<form>
+<label for="user_name">User name: </label><input type="text" name="user_name" id="user_name" autofocus>
+<input type="submit">
+<input type="reset">
+</form>
+
+<br><br>
+
+<p>
+2. The <strong>email type</strong> is used for input fields that should contain an e-mail address.
+The value of the email field is automatically validated when the form is submitted. It also helps the user when filling out the form as the browser will present "suggestions" of previous email addresses the user typed.</p>
+
+<form>
+<label for="user_email">E-mail: </label><input type="email" id="user_email" name="user_email">
+<input type="submit">
+<input type="reset">
+</form>
+
+<br><br>
+
+<p>3. The <strong>url type</strong> is used for input fields that should contain a URL address.
+The value of the url field is automatically validated when the form is submitted but notice that the user will need to type the COMPLETE URL including http or https.</p>
+
+<form>
+<label for="user_url">Homepage: </label><input type="url" id="user_url" name="user_url"><br>
+<input type="submit"><br>
+<input type="reset"><br>
+</form>
+
+<br><br>
+
+<p>4. The <strong>datalist element</strong> specifies a list of options for an input field.
+The list is created with option elements inside the datalist.
+To bind a datalist to an input field, let the list attribute of the input field refer to the id of the datalist:
+</p>
+
+
+<form>
+<label for="link">Webpage (W3Schools, Google, Microsoft): </label><input type="url" list="url_list" name="link" id="link">
+<datalist id="url_list">
+	<option label="W3Schools" value="http://www.w3schools.com"></option>
+	<option label="Google" value="http://www.google.com"></option>
+	<option label="Microsoft" value="http://www.microsoft.com"></option>
+</datalist>
+<input type="submit">
+<input type="reset">
+</form>
+
+<br><br>
+
+<p>5. The <strong>autocomplete attribute</strong> works with the form tag, and the following input types: text, search, url, telephone, email, password, datepickers, range, and color.
+When the user starts to type in an autocomplete field, the browser should display options to fill in the field:
+ Note: In some browsers you may need to activate the autocomplete function for this to work.
+
+Fill in and submit the form, then reload the page to see how autocomplete works.
+Notice that autocomplete is "on" for the form, but "off" for the e-mail field.</p>
+
+
+<form action="" method="get" autocomplete="on">
+<label for="fname">First name: </label><input type="text" name="fname" id="fname"><br>
+<label for="email">E-mail: </label><input type="email" name="email" id="email" autocomplete="off"><br>
+<input type="submit">
+<input type="reset">
+</form>
+
+<br><br>
+
+<p>
+6. The <strong>height and width</strong> attributes specifies the height and width of the image used for the input type image.
+</p>
+
+&lt;form><br>
+&lt;input type="image" src="img_submit.gif" width="24" height="24"><br>
+&lt;/form>
+
+
+<br><br>
+
+<p>7. The <strong>pattern attribute</strong> specifies a pattern used to validate an input field.
+The pattern is a regular expression. Note: The pattern attribute works with the following input types: text, search, url, telephone, email, and password. 
+The example below shows a text field that can only contain three letters (no numbers or special characters):
+</p>
+
+<form>
+<label for="country_code">Country code: </label><input type="text" id="country_code" name="country_code"
+pattern="[A-z]{3}" title="Three letter country code">
+<input type="submit">
+<input type="reset">
+</form>
+
+<br><br>
+
+<p>
+8. The <strong>required attribute</strong> specifies that an input field must be filled out before submitting.
+Note: The required attribute works with the following input types: text, search, url, telephone, email, password, date pickers, number, checkbox, radio, and file.
+</p>
+
+<form>
+<label for="user_name">Name: </label><input type="text" id="user_name" name="usr_name" required>
+<input type="submit">
+<input type="reset"> 
+</form>
+
+<br><br>
+
+<form>
+<label for="yourname">What is your name? </label><input type="text" name="yourname" id="yourname" required>
+<input type="submit">
+<input type="reset"> 
+</form>
+
+<h3>FINAL OBSERVATION</h3>
+<p>All the examples shown above include the <strong>label</strong> tag that needs to be used in forms to provide accessibility! There are two ways to use the label tag:<br>
+&lt;label for="yourage">Your age: &lt;/label>&lt;input type="number" id="yourage" name="age" min="18"><br>
+where the value of the <strong>for</strong> attribute is the value of the <strong>id</strong> attribute of the tag that the label refers to<br><br>
+<strong>OR</strong><br><br>
+&lt;label>Your age: &lt;input type="number" id="yourage" name="age" min="18">&lt;/label><br>
+where the label tag is surrounding the text/content of the label and the input tag the label refers to</p>
+<br>
+<p>It is important to include the <strong>name</strong> attribute in the field areas of your form (input, textarea, etc.). It identifies the element in a JavaScript or server-side programming when the form is submitted. Only form elements with a name attribute will have their values passed when submitting a form! So, get used to code the <strong>name</strong> attribute in your forms!</p>
+</body>
+</html>
