@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Capability</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            min-height: 100vh;
+            background-color: yellow;
+        }
+
+        .hover {
+            display: none;
+        }
+
+        @media (hover: hover) {
+            body {
+                background: blue;
+                color: white;
+            }
+
+            .touch {
+                display: none;
+            }
+
+            .hover {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Device - Hover or Touch?</h1>
+    <p class="touch">This is a touch input device!</p>
+    <p class="hover">This is a hover-capabable device!</p>
+    <p>This paragraph will always be shown</p>   
+</body>
+</html>
