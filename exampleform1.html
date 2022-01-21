@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Form example 2</title>
+
+<style>
+input {text-align: right;}
+body {background-color: #f5f5dc;}
+.body { width: 550px; margin: 0px auto;}
+</style>
+
+<script>
+
+function process()
+{
+var number1, number2, n1, n2, sum;
+
+number1 = document.forms["myform"].elements["num1"].value;
+
+number2 = document.forms["myform"].elements["num2"].value;
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+sum = n1 + n2;
+document.forms["myform"].elements["result"].value = sum;
+}
+</script>
+</head>
+
+<body>
+
+<section class="body">
+
+<form name="myform">
+<table>
+<tr>
+<td><label for="num1">First Number:</label></td>
+<td><input type="text" name="num1" id="num1" size="10"></td>
+</tr>
+
+<tr>
+<td><label for="num2">Second Number:</label></td>
+<td><input type="text" name="num2" id="num2" size="10"></td>
+</tr>
+
+<tr>
+<td>Sum is:</td>
+<td><input type="text" name="result" size="10" readonly></td>
+</tr>
+
+</table>
+<br><br>
+
+<input type="button" onclick="process()" value="SUBMIT">
+<input type="reset" value="RESET">
+</form>
+</section>
+</body>
+
