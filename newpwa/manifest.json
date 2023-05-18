@@ -1,0 +1,16 @@
+{
+    "name":"PWA",
+    "short_name":"First PWA",
+    "description":"First and simple PWA",
+    "theme_color":"#bee2ef",
+    "background_color":"#cccccc",
+    "display":"standalone",
+    "orientation":"portrait",
+    "scope":"/",
+    "start_url":"/index.html",
+    "icons":[
+        {"src":"icon192.png","sizes":"192x192","type":"image/png"},
+        {"src":"icon512.png","sizes":"512x512","type":"image/png"},
+        {"src":"icon512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+        ]
+}
